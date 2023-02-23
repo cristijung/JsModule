@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aula de DOM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <h1 class="container-fluid">Aula 02 - DOM</h1>
+    <main class="container">
+        <h2>getElementById</h2>
+        <p id="trocar" style="font-size:42px; font-weight: bold">Mudando de Cor!</p>
+        <input type="button" onclick="changeColor('blue')" class="btn btn-primary" value="Azul"/>
+        <input type="button" onclick="changeColor('red')" class="btn btn-danger" value="Vermelho"/>
+      <hr/>  
+        <h2 id="alterar">Luke ...</h2>
+        <input 
+            type="button" 
+            onclick="document.getElementById('alterar').innerText='Eu sou seu pai!'" 
+            class="btn btn-warning" 
+            value="Trocar texto"
+        />
+        <input 
+            type="button"
+            onclick="window.location.reload()" 
+            class="btn btn-warning"
+            value="Atualizar Página"
+        />
+        <hr/>
+        <h3>Eventos</h3>
+        <button class="btn btn-warning">Cor Aleatória de fundo</button>
+
+        <script>
+            const btn = document.querySelector('button');
+            function gerarNumAleatorio(numero) {
+                return Math.floor(Math.random() * (numero + 1));
+            }
+
+            btn.addEventListener('click', () => {
+                const corAleatoria = `rgb(${gerarNumAleatorio(255)}, ${gerarNumAleatorio(255)}, ${gerarNumAleatorio(255)})`;
+                document.body.style.backgroundColor = corAleatoria;
+            });
+        </script>
+
+
+        
+
+    </main>
+
+    
+       
+
+    </main>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
