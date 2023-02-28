@@ -1,0 +1,64 @@
+@keyframes animation {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  
+  body {
+    color: 	#008080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+  
+  .label {
+    font-size: 100px;
+    line-height: 0.9;
+  }
+  
+  .border {
+    border: 1px solid #f2f2f2;
+  }
+  
+  .progress {
+    height: 20px;
+    background-color: #87CEEB
+  }
+  
+  .animate {
+    animation-name: animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .pause {
+    animation-play-state: paused;
+  }
+  
+  .buttons-group {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .but-space {
+    margin-right: 2px;
+  }
+  
+  button:active {
+    transform: translate3d(1px, 1px, 0);
+  }
+  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
