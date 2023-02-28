@@ -58,3 +58,12 @@ p1.then(function(value) { //quando é resolve
 }), function() {
     console.log('Caiu no catch, não deu certo');
 };
+
+//----------------------------------------------------
+function resolverDepois(x) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(x);
+        }, 2000);
+    });
+}
