@@ -1,0 +1,29 @@
+
+header {
+    background-color: #4682B4;
+    border-bottom: solid 10px #ccc;
+}
+
+main {
+    text-align: center;
+    color:	#363636; 
+    width: 100%;   
+    
+}
+
+.content {
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    width:70%;
+    margin-top: 2%;
+    margin: auto;
+    padding: 2%;
+}    
+
+.titulo {
+    text-align: center;
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+}
+
