@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Try catch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <main class="container">
+        <h1>Try Catch</h1>
+        <h3>Como usar</h3>
+
+        <p>Ex. 2</p>
+        <p>Digite um valor no campo entre 10 e 30</p>
+        
+            <input type="text" class="form-control" id="teste"/> 
+            <button type="button" onclick="meuTeste()" class="btn btn-success" style="margin-top: 1%;">Testar conteúdo</button>
+            <p id="info"></p>
+      
+            <hr/>
+            <p>Ex. 3</p>
+
+        <script>
+            function meuTeste() {
+                const msg = document.getElementById('info');
+                msg.innerHTML = '';
+
+                let x = document.getElementById('teste').value;
+
+                try {
+                    if (x == '') throw 'vazio';
+                    if (isNaN(x)) throw 'não é um número';
+                    x = Number(x);
+                    if(x < 10) throw 'Valor muito baixo, por favor digite um nº maior';
+                    if(x > 30) throw 'Valor muito alto, por favor digite um nº menor';
+                }
+                catch(err) {
+                    msg.innerHTML = 'O campo de texto está ' + err;
+                }                
+            }            
+        </script>
+        <script>
+            try {
+                alertas('Olá crianças, tudo bom?');
+            }
+            catch(err) {
+                document.write('Deu erro!<br/> Porque o alerta está declarado errado! <br/>');
+            }
+            finally{
+                document.write('O bloco try não foi executado - finalizando a operação');
+            }
+        </script>
+       
+
+
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
